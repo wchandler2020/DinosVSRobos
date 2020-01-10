@@ -10,11 +10,12 @@ namespace DinosVsRobots
     {
         public string userInput;
         public string selectCharacter;
+        Fleet fleet = new Fleet();
+        Herd herd = new Herd();
 
         public void gameController()
         {
             gameInit();
-           
         }
 
         public void gameInit()
@@ -33,18 +34,24 @@ namespace DinosVsRobots
                 switch (selectCharacter)
                 {
                     case "1":
-                        Console.WriteLine($"Excellent Choice you are a Robot");
-                        Console.ReadLine();
-                        Fleet.robotInit();
+                        Console.WriteLine($"Excellent Choice you are a Robot!!!");
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                        fleet.robotInit();
                         break;
                     case "2":
-
+                        Console.WriteLine($"Excellent Choice you are a Dinosaur");
+                        herd.dinoInit();
+                        break;
+                    default:
+                        Console.WriteLine($"Sorry that is not option....");
+                        gameOptions();
                         break;
                 }
             }
             else if (userInput == "n" || userInput == "no")
             {
                 Console.WriteLine("Aww that's too bad, maybe next time. BYE");
+                Console.WriteLine("Press Enter to exit.");
                 Console.ReadLine();
             }else
             {
@@ -52,8 +59,5 @@ namespace DinosVsRobots
                 gameInit();
             }
         }
-
-
-
     }
 }

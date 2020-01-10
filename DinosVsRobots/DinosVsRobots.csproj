@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattleField.cs" />
-    <Compile Include="Dinosaurs.cs" />
+    <Compile Include="Dinosaur.cs" />
     <Compile Include="Fleet.cs" />
     <Compile Include="Herd.cs" />
     <Compile Include="Program.cs" />

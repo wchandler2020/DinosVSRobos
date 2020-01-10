@@ -11,12 +11,13 @@ namespace DinosVsRobots
         public string robotName;
         public int robotHealth;
         public int robotPowerLevel;
-        public string weaponType;
-        public string attackPower;
+        public Weapon weapon;
 
-        public Robot(string robotName)
+        public Robot(string robotName, int robotHealth, string weaponType)
         {
             this.robotName = robotName;
+            this.robotHealth = robotHealth;
+            weapon = new Weapon(weaponType);
         }
     }
 }
