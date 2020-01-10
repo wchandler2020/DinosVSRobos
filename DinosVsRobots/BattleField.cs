@@ -14,7 +14,7 @@ namespace DinosVsRobots
         public void gameController()
         {
             gameInit();
-            
+           
         }
 
         public void gameInit()
@@ -30,19 +30,17 @@ namespace DinosVsRobots
             {
                 Console.WriteLine("Awesome, please enter (1) to do battle a robot or (2) kick butt as a dinosaur: ");
                 selectCharacter = Console.ReadLine();
-                Console.WriteLine($"Excellent Choice you are a {selectCharacter}");
-                Console.ReadLine();
                 switch (selectCharacter)
                 {
                     case "1":
-                        robot1.robotCreator();
+                        Console.WriteLine($"Excellent Choice you are a Robot");
+                        Console.ReadLine();
+                        Fleet.robotInit();
                         break;
                     case "2":
-                        robot1.robotCreator();
+
                         break;
                 }
-
-
             }
             else if (userInput == "n" || userInput == "no")
             {
