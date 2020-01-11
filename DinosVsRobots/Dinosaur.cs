@@ -11,14 +11,18 @@ namespace DinosVsRobots
         public string dinoName;
         public int dinoHealth;
         public int dinoPowerLevel;
-        public string dinoAttack;
+        public Weapon weapon;
 
-        public Dinosaur(string dinoName, int dinoHealth, string dinoAttack)
+        public Dinosaur(string dinoName, int dinoHealth, Weapon weapon)
         {
             this.dinoName = dinoName;
             this.dinoHealth = dinoHealth;
-            this.dinoAttack = dinoAttack;
-            
+            this.weapon = weapon; 
+        }
+
+        public void dinoAttack(Robot robot)
+        {
+            robot.robotHealth -= weapon.weaponsAttack();
         }
     }
 }

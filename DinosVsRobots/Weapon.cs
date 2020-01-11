@@ -8,49 +8,20 @@ namespace DinosVsRobots
 {
     class Weapon
     {
-        public string weaponType;
+        public string weaponName;
         public int attackPower;
 
-        public Weapon(string weaponType)
+        public Weapon(string weaponName)
         { 
-            this.weaponType = weaponType;
-            weaponsInit();
+            this.weaponName = weaponName;
         }
-        public void weaponsInit()
+        public int weaponsAttack()
         {
-            if(weaponType == "plasma gun")
-            {
-                PlasmaSwordAttack();
-            }else if(weaponType == "laser")
-            {
-                LaserAttack();
-            }else if(weaponType == "shotgun")
-            {
-                ShotGunAttack();
-            }
-            else
-            {
-                //add user validation
-            }  
-        }
-
-       public void PlasmaSwordAttack()
-        {
-            Random randNum = new Random();
-            attackPower = randNum.Next(1, 10);
             
-        }
-
-        public void LaserAttack()
-        {
-            Random randNum = new Random();
-            attackPower = randNum.Next(1, 10);
-        }
-
-        public void ShotGunAttack()
-        {
-            Random randNum = new Random();
-            attackPower = randNum.Next(1, 10);
-        }
+             Random randNum = new Random();
+             attackPower = randNum.Next(1, 10);
+             return attackPower;  
+            
+        } 
     }
 }

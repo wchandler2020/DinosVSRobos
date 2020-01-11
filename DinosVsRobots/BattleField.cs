@@ -12,6 +12,7 @@ namespace DinosVsRobots
         public string selectCharacter;
         Fleet fleet = new Fleet();
         Herd herd = new Herd();
+        Weapon weapon = new Weapon("gun");
 
         public void gameController()
         {
@@ -35,11 +36,12 @@ namespace DinosVsRobots
                 {
                     case "1":
                         Console.WriteLine($"Excellent Choice you are a Robot!!!");
-                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         fleet.robotInit();
                         break;
                     case "2":
                         Console.WriteLine($"Excellent Choice you are a Dinosaur");
+                        Console.ForegroundColor = ConsoleColor.Red;
                         herd.dinoInit();
                         break;
                     default:
@@ -53,11 +55,17 @@ namespace DinosVsRobots
                 Console.WriteLine("Aww that's too bad, maybe next time. BYE");
                 Console.WriteLine("Press Enter to exit.");
                 Console.ReadLine();
-            }else
+            }
+            else
             {
                 Console.WriteLine("Please enter either yes or no");
                 gameInit();
             }
+        }
+
+        public void battleMode()
+        {
+            Console.WriteLine();
         }
     }
 }

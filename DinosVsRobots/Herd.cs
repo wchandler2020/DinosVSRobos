@@ -12,13 +12,10 @@ namespace DinosVsRobots
         {
             //List of avaibla robots to use.
             List<Dinosaur> DinoList = new List<Dinosaur>() {
-                new Dinosaur("Barney", 100, "Annoying Song"),
-                new Dinosaur("T-Rex", 100, "Bite"),
-                new Dinosaur("Dino", 100, "No Clue")
+                new Dinosaur("Barney", 100, new Weapon("Annoying Song")),
+                new Dinosaur("T-Rex", 100, new Weapon("Bite")),
+                new Dinosaur("Dino", 100, new Weapon("Headbutt"))
             };
-
-
-            Console.WriteLine("Please choose your Dino: ");
 
             for (int i = 0; i < DinoList.Count; i++)
             {
@@ -27,7 +24,7 @@ namespace DinosVsRobots
 
             int userChoice = int.Parse(Console.ReadLine());
             Console.ResetColor();
-            Console.WriteLine("Awesome you have chosen " + DinoList[userChoice - 1].dinoName + " and currently his health is " + DinoList[userChoice - 1].dinoHealth + ".");
+            Console.WriteLine("Awesome you have chosen " + DinoList[userChoice - 1].dinoName + " and currently his health is " + DinoList[userChoice - 1].dinoHealth + "." + " Be careful to avoid his " + DinoList[userChoice - 1].weapon.weaponName);
             Console.ReadLine();
         }
     }
