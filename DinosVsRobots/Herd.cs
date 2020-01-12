@@ -8,7 +8,7 @@ namespace DinosVsRobots
 {
     class Herd
     {
-        public void dinoInit()
+        public Dinosaur dinoInit()
         {
             //List of avaibla robots to use.
             List<Dinosaur> DinoList = new List<Dinosaur>() {
@@ -19,13 +19,14 @@ namespace DinosVsRobots
 
             for (int i = 0; i < DinoList.Count; i++)
             {
-                Console.WriteLine(i + 1 + ". " + DinoList[i].dinoName);
+                Console.WriteLine(i + 1 + ". " + DinoList[i].dinoName );
             }
 
             int userChoice = int.Parse(Console.ReadLine());
             Console.ResetColor();
             Console.WriteLine("Awesome you have chosen " + DinoList[userChoice - 1].dinoName + " and currently his health is " + DinoList[userChoice - 1].dinoHealth + "." + " Be careful to avoid his " + DinoList[userChoice - 1].weapon.weaponName);
             Console.ReadLine();
+            return DinoList[userChoice - 1];
         }
     }
 }

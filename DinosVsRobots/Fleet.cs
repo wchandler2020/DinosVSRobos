@@ -11,7 +11,7 @@ namespace DinosVsRobots
         Weapon robotWeapon = new Weapon("");
         Herd dino1 = new Herd();
        
-        public void robotInit()
+        public Robot robotInit()
         {
             //List of avaibla robots to use.
             List<Robot> RobotList = new List<Robot>() {
@@ -31,15 +31,17 @@ namespace DinosVsRobots
             int userChoice = int.Parse(Console.ReadLine());
             Console.ResetColor();
             Console.WriteLine("Awesome you have chosen " + RobotList[userChoice - 1].robotName + ". His main weapon is a " + RobotList[userChoice - 1].weapon.weaponName + " and currently his health is " + RobotList[userChoice -1].robotHealth +".");
-            opponentSelect();
-           
+            return RobotList[userChoice - 1];
+
+
         }
-      public void opponentSelect()
+      public Dinosaur opponentSelect()
         {
             Console.WriteLine("Choose your worthy opponent: ");
             Console.ForegroundColor = ConsoleColor.Red;
-            dino1.dinoInit();
+            Dinosaur dinosaur = dino1.dinoInit();
             Console.ResetColor();
+            return dinosaur;
 
             //int userSelect = int.Parse(Console.ReadLine());
             //if(userSelect == 1)
@@ -60,7 +62,5 @@ namespace DinosVsRobots
             //    //need authentication
             //}
         }  
-
-       
     }
 }

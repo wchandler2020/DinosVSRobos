@@ -19,7 +19,8 @@ namespace DinosVsRobots
         {
             
              Random randNum = new Random();
-             attackPower = randNum.Next(1, 10);
+             attackPower = randNum.Next(10, 20);
+
              return attackPower;  
             
         } 

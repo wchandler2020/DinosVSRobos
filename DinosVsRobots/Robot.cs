@@ -23,7 +23,7 @@ namespace DinosVsRobots
 
         public void roboWeaponAttack(Dinosaur dinosaur)
         {
-            dinosaur.dinoHealth -= weapon.weaponsAttack();
+           dinosaur.dinoHealth -= weapon.weaponsAttack();
         }
     }
 }
