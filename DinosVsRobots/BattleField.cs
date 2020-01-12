@@ -29,7 +29,7 @@ namespace DinosVsRobots
             Console.WriteLine("Welcome to Robots vs. Dinosaurs, would you like to play a game? Please enter yes or no. ");
             userInput = Console.ReadLine().ToLower();
             gameOptions();
-            Console.WriteLine("Let's get ready to ");
+            Console.WriteLine("Let's get ready to do battle!!!");
             battleMode(dinosaur, robot);
         }
 
@@ -42,13 +42,13 @@ namespace DinosVsRobots
                 switch (selectCharacter)
                 {
                     case "1":
-                        Console.WriteLine($"Excellent Choice you are a Robot!!!");
+                        Console.WriteLine($"Excellent choice you are a Robot!!!");
                         Console.ForegroundColor = ConsoleColor.Blue;
                         robot = fleet.robotInit();
                         dinosaur = fleet.opponentSelect();
                         break;
                     case "2":
-                        Console.WriteLine($"Excellent Choice you are a Dinosaur");
+                        Console.WriteLine($"Excellent choice you are a Dinosaur");
                         Console.ForegroundColor = ConsoleColor.Red;
                         dinosaur = herd.dinoInit();
                         break;
@@ -74,18 +74,11 @@ namespace DinosVsRobots
 
         public void battleMode(Dinosaur dinosaur, Robot robot)
         {
-
-
-            int num1 = 1;
-            int num2 = 2;
-            int num3 = num1 * num2;
-            
-
-          
+            int num1 = 2;                    
                 while (dinosaur.dinoHealth > 0 && robot.robotHealth > 0)
                 {
-                    num3++;
-                    if (num3 % 2 == 0)
+                    num1++;
+                    if (num1 % 2 == 0)
                     {
                         Console.WriteLine(robot.robotName + " is attacking " + weapon.weaponsAttack());
                         robot.roboWeaponAttack(dinosaur);

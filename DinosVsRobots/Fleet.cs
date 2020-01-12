@@ -28,10 +28,31 @@ namespace DinosVsRobots
                 Console.WriteLine(i + 1 + ". " + RobotList[i].robotName);
             }
 
+            //if input is enter as "ENTER" will return an exception for 
             int userChoice = int.Parse(Console.ReadLine());
-            Console.ResetColor();
-            Console.WriteLine("Awesome you have chosen " + RobotList[userChoice - 1].robotName + ". His main weapon is a " + RobotList[userChoice - 1].weapon.weaponName + " and currently his health is " + RobotList[userChoice -1].robotHealth +".");
-            return RobotList[userChoice - 1];
+
+            if(userChoice == 1)
+            {
+                Console.ResetColor();
+                Console.WriteLine("Awesome you have chosen " + RobotList[userChoice - 1].robotName + ". His main weapon is a " + RobotList[userChoice - 1].weapon.weaponName + " and currently his health is " + RobotList[userChoice - 1].robotHealth + ".");
+                return RobotList[userChoice - 1];
+            }else if(userChoice == 2)
+            {
+                Console.ResetColor();
+                Console.WriteLine("Awesome you have chosen " + RobotList[userChoice - 1].robotName + ". His main weapon is a " + RobotList[userChoice - 1].weapon.weaponName + " and currently his health is " + RobotList[userChoice - 1].robotHealth + ".");
+                return RobotList[userChoice - 1];
+            }else if(userChoice == 3)
+            {
+                Console.ResetColor();
+                Console.WriteLine("Awesome you have chosen " + RobotList[userChoice - 1].robotName + ". His main weapon is a " + RobotList[userChoice - 1].weapon.weaponName + " and currently his health is " + RobotList[userChoice - 1].robotHealth + ".");
+                return RobotList[userChoice - 1];
+            }
+            else
+            {
+                Console.WriteLine("I am sorry that is not an option. ");
+                return robotInit();
+            }
+            
 
 
         }

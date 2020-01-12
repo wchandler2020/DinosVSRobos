@@ -12,9 +12,9 @@ namespace DinosVsRobots
         {
             //List of avaibla robots to use.
             List<Dinosaur> DinoList = new List<Dinosaur>() {
-                new Dinosaur("Barney", 100, new Weapon("Annoying Song")),
-                new Dinosaur("T-Rex", 100, new Weapon("Bite")),
-                new Dinosaur("Dino", 100, new Weapon("Headbutt"))
+                new Dinosaur("Barney", 100, new Weapon("Annoying Song Attack.")),
+                new Dinosaur("T-Rex", 100, new Weapon("Bite.")),
+                new Dinosaur("Dino", 100, new Weapon("Headbutt."))
             };
 
             for (int i = 0; i < DinoList.Count; i++)
