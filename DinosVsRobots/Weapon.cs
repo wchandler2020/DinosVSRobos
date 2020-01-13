@@ -9,7 +9,7 @@ namespace DinosVsRobots
     class Weapon
     {
         public string weaponName;
-        public int attackPower;
+        public int attackPower;  
 
         public Weapon(string weaponName)
         { 

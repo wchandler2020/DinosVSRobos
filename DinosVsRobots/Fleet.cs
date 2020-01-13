@@ -19,8 +19,7 @@ namespace DinosVsRobots
                 new Robot("Megatron", 100, new Weapon("Plasma Cannon")),
                 new Robot("Johnny Five", 100, new Weapon("Laser Attack"))
             };
-            
-           
+                     
             Console.WriteLine("Please choose your warrior: ");
             
             for (int i = 0; i < RobotList.Count; i++)
@@ -28,7 +27,8 @@ namespace DinosVsRobots
                 Console.WriteLine(i + 1 + ". " + RobotList[i].robotName);
             }
 
-            //if input is enter as "ENTER" will return an exception for 
+            //if input is enter as "ENTER" will return an exception for System.FormatException: 'Input string was not in a correct format.'
+            //**user chooses it specific Robot**
             int userChoice = int.Parse(Console.ReadLine());
 
             if(userChoice == 1)
@@ -52,9 +52,6 @@ namespace DinosVsRobots
                 Console.WriteLine("I am sorry that is not an option. ");
                 return robotInit();
             }
-            
-
-
         }
       public Dinosaur opponentSelect()
         {

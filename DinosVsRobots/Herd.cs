@@ -22,6 +22,7 @@ namespace DinosVsRobots
                 Console.WriteLine(i + 1 + ". " + DinoList[i].dinoName );
             }
 
+
             int userChoice = int.Parse(Console.ReadLine());
             Console.ResetColor();
             Console.WriteLine("Awesome you have chosen " + DinoList[userChoice - 1].dinoName + " and currently his health is " + DinoList[userChoice - 1].dinoHealth + "." + " Be careful to avoid his " + DinoList[userChoice - 1].weapon.weaponName);

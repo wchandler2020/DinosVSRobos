@@ -83,7 +83,7 @@ namespace DinosVsRobots
                         Console.WriteLine(robot.robotName + " is attacking " + weapon.weaponsAttack());
                         robot.roboWeaponAttack(dinosaur);
                         Console.WriteLine(dinosaur.dinoName + " health level: " + dinosaur.dinoHealth);
-                        Console.WriteLine("to atttack the press Enter");
+                        Console.WriteLine("to atttack press ENTER");
                         Console.ReadLine();
                     }
                     else
@@ -91,7 +91,7 @@ namespace DinosVsRobots
                         Console.WriteLine(dinosaur.dinoName + " is attacking: " + weapon.weaponsAttack());
                         dinosaur.dinoAttack(robot);
                         Console.WriteLine(robot.robotName + " health level: " + robot.robotHealth);
-                        Console.WriteLine("to atttack the press Enter");
+                        Console.WriteLine("to atttack press ENTER");
                         Console.ReadLine();
                     }
                 }
